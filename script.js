@@ -37,6 +37,7 @@ function Users(firstName, lastName, email) {
     this.email = email;
 }
 btn.addEventListener("click", (e) => {
+    if(firstName.value.length > 0 && lastName.value.length > 0 && email.value.length > 0){
     e.preventDefault();
     newUser = new Users(firstName.value, lastName.value, email.value);
     userList.push(newUser);
@@ -70,4 +71,8 @@ btn.addEventListener("click", (e) => {
         userList = userList.filter(item => item.trFirst != delTr)
         trDeleted.remove()
     })
+}else{
+    alert("Zəhmət olmasa formu doldurun")
+    e.preventDefault();
+}
 })
