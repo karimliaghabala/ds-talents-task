@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(169, 209, 209);
+    font-family: 'Tektur', cursive;
+}
+.container{
+    border: 1px solid black;
+    display: block;
+}
+
+.top-container{
+    display: block;
+    border: 1px dotted;
+    height: 50%;
+    text-align: center;
+}
+.bottom-container{
+    height: 50%;
+    border: 1px dotted;
+    text-align: center;
+
+}
+.form-group{
+    display: block;
+    align-items:center;
+    justify-content: center;
+}
+.input{
+    display: block;
+    margin: 10px;
+}
+.input>label{
+    display: block;
+    margin-bottom: 10px;
+}
+.input>input{
+    background-color: pink;
+    border: 7px double green;
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.7);
+}
+.input>input:hover{
+    background-color: greenyellow;
+    border:10px double green ;
+    transition:  0.3s ease;
+}
+.input>input:focus{
+    background-color: greenyellow;
+    border:10px double green ;
+    transition:  0.3s ease;
+}
+.form-group>button{
+    color: wheat;
+    background-color: rgb(0, 138, 41);
+    border: 5px double rgb(233, 236, 233);
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Tektur', cursive;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom:10px;
+}
+.form-group>button:hover{
+    border:10px double rgb(128, 179, 126) ;
+    transition:  0.3s ease;
+}
+
+
+
+
+
+
+.bottom-container>table{
+    border: 7px double green;
+}
+.bottom-container>table {
+    width: 100%;
+}
+.bottom-container>table button {
+    color: wheat;
+    background-color: rgb(138, 0, 0);
+    border: 5px double rgb(233, 236, 233);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Tektur', cursive;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.bottom-container>table button:hover{
+    border:10px double rgb(128, 179, 126) ;
+    transition:  0.3s ease;
+}
