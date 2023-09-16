@@ -41,10 +41,13 @@ btn.addEventListener("click", (e) => {
     e.preventDefault();
     newUser = new Users(firstName.value, lastName.value, email.value);
     userList.push(newUser);
+    
+
 
     tr = document.createElement("tr");
 
     tbody.append(tr)
+
     trFirst = document.createElement("td");
     trLast = document.createElement("td");
     trMail = document.createElement("td");
@@ -54,12 +57,10 @@ btn.addEventListener("click", (e) => {
     tr.append(trLast);
     tr.append(trMail);
     tr.append(tdBtns);
-
     btnDelete = document.createElement("button");
     tdBtns.append(btnDelete);
 
     btnDelete.textContent = "Delete";
-
     userList.forEach(item => {
         trFirst.textContent = item.firstName
         trLast.textContent = item.lastName
@@ -71,8 +72,24 @@ btn.addEventListener("click", (e) => {
         userList = userList.filter(item => item.trFirst != delTr)
         trDeleted.remove()
     })
+
 }else{
     alert("Zəhmət olmasa formu doldurun")
     e.preventDefault();
 }
 })
+//reverse table
+function reverseTable() {
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    rows.reverse();
+  
+    tbody.innerHTML = ""; 
+  
+    rows.forEach((row) => {
+      tbody.appendChild(row);
+    });
+  }
+  
+  btn.addEventListener("click", () => {
+    reverseTable();
+  });
